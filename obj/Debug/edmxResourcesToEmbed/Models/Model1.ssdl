@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbRestaurantModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="metrics">
+    <Key>
+      <PropertyRef Name="metricID" />
+    </Key>
+    <Property Name="metricID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="description" Type="varchar" MaxLength="255" />
+    <Property Name="campaignID" Type="int" />
+    <Property Name="display_order" Type="int" />
+  </EntityType>
+  <EntityContainer Name="dbRestaurantModelStoreContainer">
+    <EntitySet Name="metrics" EntityType="Self.metrics" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
